@@ -1,0 +1,13 @@
+{% extends 'music/base.html' %}
+	{% block body %}
+	<div class="flex-container">
+	{% for song in object_list %}
+	<div class="box">
+	<img class="img1" src="{{ song.image.url }}">
+	<div class="fig1">
+	<li><a href="">{{song.song_tittle}} ~ {{song.artist}}</a></li>
+	</div>
+    </div>
+	{% endfor %}
+	</div>
+	{% endblock %}

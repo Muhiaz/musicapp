@@ -1,0 +1,16 @@
+{% extends 'music/base.html' %}
+	{% block body %}
+	<div class="flex-container">
+	{% for album in object_list %}
+	<div class="box1">
+	<img class="img1" src="{{ album.album_logo.url }}">
+	<div class="fig1">
+	<li><a href="{% url 'music:detail' album.id %}">{{album}}</a></li>
+	</div>
+	<a href=""><button class="btn btn-primary btn1">View Details</button></a>
+	<i class="fa fa-dusbin"></i>
+    </div>
+	{% endfor %}
+	</div>
+	{% endblock %}
+

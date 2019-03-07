@@ -1,0 +1,33 @@
+{% extends 'music/base.html' %}
+{% block body %}
+<div class="row">
+<div class="div">
+<img src="{{album.album_logo.url}}" class="img" >
+<figcaption class="fig">
+<h2>{{album.album_tittle}}</h2>
+<h3>{{album.artist}}</h3>
+</figcaption>
+</div>
+<div class="div1">
+<table style="width: 600px; height: 300px;" class="table table-hover">
+	<tr>
+		<th>Album</th>
+		<th> Song-tittle</th>
+		<th> File-Type</th>
+		<th>Listen</th>
+		<th>Download</th>
+	</tr>	
+{% for song in album.song_set.all %}
+	<tr>
+		<td> {{song.album}}</td>
+		<td>{{song.song_tittle}}</td>
+		<td>{{song.file_type}}</td>
+		<td><a href=""><i class="fa fa-play"></i></a></td>
+		<td><a href=""> <i class="fa fa-download"></i></a></td>
+	</tr> 
+	{% endfor %}
+</table>
+<a href="{% url 'music:song' %}">Add song</a>
+</div>e
+</div>
+{% endblock %}
