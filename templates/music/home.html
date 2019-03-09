@@ -3,14 +3,18 @@
 	<div class="flex-container">
 	{% for album in object_list %}
 	<div class="box1">
-	<img class="img1" src="{{ album.album_logo.url }}">
+	<img style="height: 250px;" class="img1" src="{{ album.album_logo.url }}">
 	<div class="fig1">
-	<li><a href="{% url 'music:detail' album.id %}">{{album}}</a></li>
+	<li><h3  style="margin-left: 10px;"> Artist: {{album.artist}}</h3></li>
+	<li><h4 style="margin-left: 10px;">Album Tittle: {{album.album_tittle}}</h4></li>
 	</div>
-	<a href=""><button class="btn btn-primary btn1">View Details</button></a>
-	<i class="fa fa-dusbin"></i>
-    </div>
-	{% endfor %}
+	<div style="margin-top: 80px;">
+	<a href="{% url 'music:detail' album.id %}"><button class="btn btn-primary btn1">View Details</button></a>
+	<a style="color: black; margin-left: 10px;" href="{% url 'music:album-delete' album.id %}"><i class="fa fa-trash "></i></a>
+	<a style="color: yellow; font-weight: 800px; margin-left: 10px;" href="{% url 'music:album-delete' album.id %}"><i class="fa fa-star "></i></a>
+	<i class="share"></i>
+	</div>
+    </div>{% endfor %}
 	</div>
 	{% endblock %}
 

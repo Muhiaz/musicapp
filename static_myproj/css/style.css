@@ -21,10 +21,11 @@ body{
 	float: left;
 	width: 400px;
 	height: 550px;
-	background-color: gray;
+	background-color: #fff;
 	border-radius: 5px;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 20px;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.75);
 }
 .div1{
 	float: left;
@@ -41,13 +42,21 @@ body{
 	padding-left: 25px;
 	margin: 10px;
 }
-/*use of flex box to centre elements*/
+.fig1{
+	margin-left: 10px;
+	text-decoration: none;
+	color: black;
+}
 .fig1 li{
 	list-style: none;
 }
 .fig1 li a{
 	text-decoration: none;
+	color: black;
+	font-family: 'lato',sans serisf;
+	font-size: 16px;
 }
+/*use of flex box to centre elements*/
 .flex-container{
 	display: flex; 
 	flex: 25%;
@@ -60,24 +69,35 @@ body{
 
 .img1{
 	width: 300px;
+	height: 200px;
+	padding: 15px;
+	opacity: 1;
+}
+.box:hover .img1{
+	opacity: 0.3;
+}
+.img2{
+	width: 300px;
 	height: 300px;
 	padding: 15px;
 }
 .box{
 	width: 300px;
 	height: 220px;
+	padding: 5px;
 }
 .box1{
 	width: 300px;
 	height: 500px;
 	box-shadow: 1px 4px 30px 1px rgba(0,0,0,0.75);
 	margin: 5px;
+	border-radius: 5px;
 }
 .btn1{
 	margin-left: 10px;
 }
 .box1:hover{
-	transform: translateY(-1px);
+	transform: translateY(-5px);
 }
 @media screen and (max-width:992px){
 	.form-container{
@@ -98,4 +118,21 @@ body{
 	margin-top: 10vh;
 	box-shadow: 1px 4px 30px 1px rgba(0,0,0,0.75);
 	border-radius: 2px;
+}
+.box middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.box:hover .middle{
+	opacity: 1;
+}
+.i{
+	float: right;
+	color: blue;
 }
