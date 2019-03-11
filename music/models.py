@@ -7,6 +7,7 @@ class Album(models.Model):
 	artist = models.CharField(max_length=120)
 	genre = models.CharField(max_length=120)
 	album_logo = models.FileField()
+	
 	# inorder for a user to create an album and it is saved in the database
 	def get_absolute_url(self):
 		return reverse('music:detail',kwargs={'pk':self.pk})
@@ -26,3 +27,4 @@ class Music(models.Model):
 	song_tittle =models.CharField(max_length=120)
 	def __str__(self):
 		return self.song_tittle
+		
