@@ -62,3 +62,6 @@ class MusicListView(generic.ListView):
 	template_name= 'music/videos.html'
 	def get_queryset(self):
 		return Music.objects.all()
+
+def home(request):
+	return render(request,'home.html',{})

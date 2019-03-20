@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			font: 'lato',sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			color: #777;
+		}
+		.header{
+			background-image: linear-gradient(to left, rgba(90,80,70,0.8), rgba(80,60,50,0.8)), url(/static/img/piano.jpg);
+			background-position: center;
+			background-repeat: cover;
+			height: 95vh;
+			position: relative;
+
+		}
+		.text-box{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		.heading-primary{
+			text-transform: uppercase;
+		}
+		.heading-primary-main{
+			display: block;
+			font-size: 60px;
+			letter-spacing: 7.5px;
+			font-weight: 500px;
+			animation: moveInLeft 2s;
+		}
+		.heading-primary-sub{
+			display: block;
+			font-size: 25px;
+			letter-spacing: 2.0px;
+			font-weight: 600px;
+			animation: moveInRight 2s;
+		}
+		@keyframes moveInLeft{
+			0%{
+				opacity: 0;
+			}
+			80%{
+				transform: translateX(100px);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(-10px);
+			}
+		}
+		@keyframes moveInRight{
+			0%{
+				opacity: 0;
+			}
+			80%{
+				transform: translateX(-100px);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(10px);
+			}
+		}
+		@keyframes moveInBottom{
+			0%{
+				opacity: 0;
+			}
+			80%{
+				transform: translateX(100px);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(-10px);
+			}
+		}
+		.btn:link, .btn:visited{
+			text-transform: uppercase;
+			color: #777;
+			text-decoration: none;
+			transition: all 2s;
+			animation: moveInBottom 2s;
+		}
+		.btn-white{
+			background-color: #fff;
+			padding: 15px 40px;
+			border-radius: 100px;
+			display: inline;
+		}
+		.btn:hover{
+			transform:translateY(-3px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.2)
+		}
+		.btn:active{
+			transform:translateY(-1px);
+			box-shadow: 0 5px 10px rgba(0,0,0,0.2)
+		}
+
+
+	</style>
+</head>
+<body>
+<header class="header">
+	<div class="text-box">
+	<h1 class="heading-primary">
+		<span class="heading-primary-main">Buzzer</span>
+		<span class="heading-primary-sub">music for everyone</span>
+	</h1>
+	<a class="btn btn-white" href="/music">Explore</a>
+	</div>
+</header>
+</body>
+</html>
